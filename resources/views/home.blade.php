@@ -11,9 +11,22 @@
 </head>
 <body>
     <header class="container">
-        <div class="row">
+        <div class="row flex-column">
+            <div class="col text-center my-4">
+                <h1>{{$title}}!</h1>
+            </div>
+            <div class="col text-center mb-4">
+                <h4>{{$desc}}!</h4>
+            </div>
             <div class="col text-center">
-                <h1>Hello World!</h1>
+                <ul>
+                    @foreach ($list as $itemlist)
+                    <li class="fw-semibold">
+                        {{$itemlist}}
+                    </li>
+                    @endforeach
+
+                </ul>
             </div>
         </div>
     </header>
